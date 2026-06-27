@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Nandini Kalal</title>
+    <meta name="description" content="Architecture design portfolio of Nandini Kalal. Showcasing academic, professional, and competition work.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23A79277'/><text x='50' y='62' font-family='serif' font-size='40' font-weight='600' fill='white' text-anchor='middle'>NK</text></svg>" type="image/svg+xml">
+    <!-- Three.js for 3D Background -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=21">
+</head>
+<body class="has-3d-bg">
+    <div class="page-transition-overlay"></div>
+    <!-- 3D Background Canvas -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Header Navigation -->
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-letters">NK</span>
+                <span class="logo-text">Nandini Kalal</span>
+            </a>
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About &amp; Journey</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="portfolio.html" class="nav-link active">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-drawer">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-link">Home</a></li>
+            <li><a href="about.html" class="mobile-link">About &amp; Journey</a></li>
+            <li><a href="skills.html" class="mobile-link">Skills</a></li>
+            <li><a href="portfolio.html" class="mobile-link active">Portfolio</a></li>
+            <li><a href="contact.html" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Subpage Header -->
+        <section class="subpage-hero">
+            <div class="hero-grid-overlay"></div>
+            <div class="container">
+                <span class="section-tag">View My Projects</span>
+                <h1>Architecture Portfolio</h1>
+                <div class="header-line"></div>
+                <p class="subpage-intro-text">
+                    A curated selection of architectural designs, construction details, and space visualizations completed during academic courses, internships, and competitions.
+                </p>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="portfolio-section section-padding alt-bg">
+            <div class="container">
+                <!-- Filters -->
+                <div class="portfolio-filters">
+                    <button class="filter-btn active" data-filter="all">All Projects</button>
+                    <button class="filter-btn" data-filter="academic">Academic</button>
+                    <button class="filter-btn" data-filter="professional">Professional Work</button>
+                    <button class="filter-btn" data-filter="competitions">Competition Work</button>
+                    <button class="filter-btn" data-filter="miscellaneous">Miscellaneous</button>
+                </div>
+
+                <!-- Projects Grid -->
+                <div class="portfolio-grid">
+                    <!-- Project Card 1: Residence -->
+                    <div class="project-card" data-category="academic" data-project-id="residence">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project_residence.png" alt="Residence Project" class="project-img">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-meta-category">Academic Project</span>
+                                    <h3>RESIDENCE</h3>
+                                    <span class="view-project-link">View Details <i class="fa-solid fa-plus"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2: Housing -->
+                    <div class="project-card" data-category="academic" data-project-id="housing">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project_housing.png" alt="Housing Project" class="project-img">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-meta-category">Academic Project</span>
+                                    <h3>HOUSING</h3>
+                                    <span class="view-project-link">View Details <i class="fa-solid fa-plus"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3: Vocational Center -->
+                    <div class="project-card" data-category="academic" data-project-id="vocational">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project_vocational.png" alt="Vocational Center Project" class="project-img">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-meta-category">Academic Project</span>
+                                    <h3>VOCATIONAL CENTER</h3>
+                                    <span class="view-project-link">View Details <i class="fa-solid fa-plus"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 4: Measure Drawing -->
+                    <div class="project-card" data-category="academic" data-project-id="measure">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project_measure_drawing.png" alt="Measure Drawing Project" class="project-img">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-meta-category">Academic Project</span>
+                                    <h3>MEASURE DRAWING</h3>
+                                    <span class="view-project-link">View Details <i class="fa-solid fa-plus"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 5: Office Work -->
+                    <div class="project-card" data-category="professional" data-project-id="office">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project_office_work.png" alt="Office Work Project" class="project-img">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-meta-category">Professional Work</span>
+                                    <h3>OFFICE WORK</h3>
+                                    <span class="view-project-link">View Details <i class="fa-solid fa-plus"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 6: Internship Work -->
+                    <div class="project-card" data-category="professional" data-project-id="internship">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project_internship.png" alt="Internship Project" class="project-img">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-meta-category">Professional Work</span>
+                                    <h3>INTERNSHIP WORK</h3>
+                                    <span class="view-project-link">View Details <i class="fa-solid fa-plus"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 7: Detailing -->
+                    <div class="project-card" data-category="academic" data-project-id="detailing">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project_detailing.png" alt="Detailing Project" class="project-img">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-meta-category">Academic Project</span>
+                                    <h3>DETAILING</h3>
+                                    <span class="view-project-link">View Details <i class="fa-solid fa-plus"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 8: Competition -->
+                    <div class="project-card" data-category="competitions" data-project-id="competition">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project_competition.png" alt="Competition Project" class="project-img">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-meta-category">Competition Work</span>
+                                    <h3>COMPETITION</h3>
+                                    <span class="view-project-link">View Details <i class="fa-solid fa-plus"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 9: Miscellaneous -->
+                    <div class="project-card" data-category="miscellaneous" data-project-id="miscellaneous">
+                        <div class="project-img-wrapper">
+                            <img src="assets/images/project_miscellaneous.png" alt="Miscellaneous Project" class="project-img">
+                            <div class="project-overlay">
+                                <div class="overlay-content">
+                                    <span class="project-meta-category">Miscellaneous Work</span>
+                                    <h3>MISCELLANEOUS</h3>
+                                    <span class="view-project-link">View Details <i class="fa-solid fa-plus"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span class="footer-logo">NK</span>
+                <p>&copy; 2026 Nandini Kalal. All Rights Reserved.</p>
+            </div>
+            <div class="footer-center">
+                <div class="footer-social-icons">
+                    <a href="https://www.linkedin.com/in/nandini-kalal-66369b35b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/_kalal_nandini_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>Designing Spaces, Crafting Experiences. Handcrafted with Precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Project Modals (Dynamic Lightbox Dialogs) -->
+    <div id="project-modal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close-btn" aria-label="Close project view"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body">
+                <div class="modal-grid">
+                    <div class="modal-info">
+                        <div class="modal-info-header">
+                            <span class="modal-category" id="modal-project-category">Project Category</span>
+                            <h2 id="modal-project-title">Project Title</h2>
+                        </div>
+                        
+                        <div class="modal-summary-section">
+                            <h3>Overview</h3>
+                            <p class="modal-description" id="modal-project-desc">Project description will appear here.</p>
+                        </div>
+                        
+                        <div class="modal-tools-section" id="modal-tools-container">
+                            <h3>Software Used</h3>
+                            <div class="tools-list" id="modal-tools-list">
+                                <!-- Tags injected via JS -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-media">
+                        <a href="" target="_blank" id="modal-project-img-link">
+                            <img src="" alt="Project Image" id="modal-project-img" style="width:100%; height:auto; display:block; image-rendering:high-quality; filter:contrast(1.02) saturate(1.05); margin-bottom:2rem;">
+                        </a>
+                        <div class="modal-gallery-placeholders">
+                            <div class="drawing-placeholders-flex" id="modal-drawings-container">
+                                <!-- Additional drawing images injected here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.0/vanilla-tilt.min.js"></script>
+    <script src="script.js?v=20"></script>
+    <script src="three-bg.js"></script>
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor-dot"></div>
+    <div id="custom-cursor-ring"></div>
+</body>
+</html>

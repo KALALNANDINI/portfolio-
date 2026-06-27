@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandini Kalal | Architecture Portfolio</title>
+    <meta name="description" content="Architecture portfolio of Nandini Kalal. Graduate of MBM University. Showcasing residential, public space, and sustainable design projects.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Outfit:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%23A79277'/><text x='50' y='62' font-family='serif' font-size='40' font-weight='600' fill='white' text-anchor='middle'>NK</text></svg>" type="image/svg+xml">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css?v=22">
+</head>
+<body>
+    <div class="page-transition-overlay"></div>
+
+    <!-- Scroll Progress Bar -->
+    <div id="scroll-progress"></div>
+
+    <!-- Header Navigation -->
+    <header id="main-header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <span class="logo-letters">NK</span>
+                <span class="logo-text">Nandini Kalal</span>
+            </a>
+            <nav id="navbar">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link active">Home</a></li>
+                    <li><a href="about.html" class="nav-link">About &amp; Journey</a></li>
+                    <li><a href="skills.html" class="nav-link">Skills</a></li>
+                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button id="mobile-menu-btn" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-nav-drawer">
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" class="mobile-link active">Home</a></li>
+            <li><a href="about.html" class="mobile-link">About &amp; Journey</a></li>
+            <li><a href="skills.html" class="mobile-link">Skills</a></li>
+            <li><a href="portfolio.html" class="mobile-link">Portfolio</a></li>
+            <li><a href="contact.html" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="hero-grid-overlay"></div>
+            <div class="container hero-container">
+                <div class="hero-text" data-reveal="left">
+                    <span class="subtitle">Bachelor of Architecture</span>
+                    <h1 class="reveal-text">
+                        <span class="word-wrapper"><span class="word">Telling</span></span>
+                        <span class="word-wrapper"><span class="word">Stories</span></span>
+                        <span class="word-wrapper"><span class="word">Through</span></span>
+                        <span class="word-wrapper"><span class="word accent-text">Space</span></span>
+                    </h1>
+                    <p class="hero-quote">
+                        "To me, architecture is more than constructing buildings—it's about telling stories through space. I strive to create designs that inspire, comfort, and foster human connection, balancing tradition with modernity."
+                    </p>
+                    <div class="hero-actions">
+                        <a href="portfolio.html" class="btn btn-primary">View Portfolio <i class="fa-solid fa-arrow-right-long"></i></a>
+                        <a href="contact.html" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+                <div class="hero-visual" data-reveal="right">
+                    <div class="profile-image-container" id="soul-reveal-container">
+                        <img src="assets/images/architect.png" alt="Soul Blueprint" class="profile-soul-bg">
+                        <img src="assets/images/profile.png" alt="Nandini Kalal Portrait" class="profile-img" id="soul-reveal-img">
+                        <!-- Custom CSS SVG wave lines in the background -->
+                        <div class="architect-waves">
+                            <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10,-80 C30,-75 50,-60 65,-40 C80,-20 90,5 85,30 C80,55 60,80 35,90 C10,100 -20,95 -45,85 C-70,75 -90,60 -95,35 C-100,10 -90,-25 -75,-50 C-60,-75 -40,-90 -10,-90 Z" transform="translate(100, 100)" fill="none" stroke="rgba(167, 146, 119, 0.2)" stroke-width="1.5" />
+                                <path d="M15,-90 C40,-85 60,-70 75,-50 C90,-30 100,0 95,30 C90,60 70,90 45,100 C20,110 -15,105 -45,95 C-75,85 -95,70 -100,45 C-105,20 -95,-15 -80,-40 C-65,-65 -45,-80 -15,-90 Z" transform="translate(100, 100)" fill="none" stroke="rgba(167, 146, 119, 0.1)" stroke-width="1" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#overview" class="scroll-down" aria-label="Scroll to Overview section">
+                <span class="scroll-mouse">
+                    <span class="scroll-wheel"></span>
+                </span>
+                <span class="scroll-text">Scroll Down</span>
+            </a>
+        </section>
+
+        <!-- Home Overview Section -->
+        <section id="overview" class="home-overview section-padding">
+            <div class="container">
+                <div class="section-header" data-reveal="fade">
+                    <span class="section-tag">Welcome to my space</span>
+                    <h2>Nandini Kalal</h2>
+                    <div class="header-line"></div>
+                </div>
+                
+                <div class="home-intro-grid">
+                    <div class="home-intro-text" data-reveal="left">
+                        <p class="lead">
+                            I am a recently graduated architect from MBM University, passionate about human-centric spatial storytelling and precise technical design.
+                        </p>
+                        <p>
+                            This digital portfolio represents a collection of my creative journeys. From deep academic studies in community housing and vocational centers, to practical on-site and drafting internship experience, I focus on balancing heritage context with modern requirements.
+                        </p>
+                        <p>
+                            Click through the sections below or use the main menu to explore my detailed work, check my career timeline, see my certificates, or download my full CV/Resume.
+                        </p>
+                        <div class="home-cta-wrapper">
+                            <a href="portfolio.html" class="btn btn-primary">Explore Portfolio <i class="fa-solid fa-arrow-right-long"></i></a>
+                            <a href="about.html" class="btn btn-secondary">Read My Story</a>
+                        </div>
+                    </div>
+                    
+                    <div class="home-cards-grid">
+                        <!-- Card 1: Portfolio Link -->
+                        <a href="portfolio.html" class="home-nav-card featured-card" data-reveal="pop-up">
+                            <div class="card-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                            <div class="card-info">
+                                <h3>Architecture Portfolio</h3>
+                                <p>A curated selection of architectural designs, construction details, and space visualizations completed during academic courses, internships, and competitions.</p>
+                                <span class="card-link-text">Browse Projects <i class="fa-solid fa-chevron-right"></i></span>
+                            </div>
+                        </a>
+                        
+                        <!-- Card 2: About & Journey Link -->
+                        <a href="about.html" class="home-nav-card" data-reveal="pop-up">
+                            <div class="card-icon"><i class="fa-solid fa-route"></i></div>
+                            <div class="card-info">
+                                <h3>About &amp; Journey</h3>
+                                <p>Learn about my 5-year B.Arch education, internship timeline, achievements, and software skills.</p>
+                                <span class="card-link-text">View Timeline &amp; Skills <i class="fa-solid fa-chevron-right"></i></span>
+                            </div>
+                        </a>
+
+                        <!-- Card 3: Contact Link -->
+                        <a href="contact.html" class="home-nav-card" data-reveal="pop-up">
+                            <div class="card-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="card-info">
+                                <h3>Get In Touch</h3>
+                                <p>Looking for a junior architect or collaborator? Send a message directly or download my full CV.</p>
+                                <span class="card-link-text">Contact Me <i class="fa-solid fa-chevron-right"></i></span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="massive-footer-text" data-reveal="fade">NANDINI</div>
+        <div class="container footer-container">
+            <div class="footer-left">
+                <span class="footer-logo">NK</span>
+                <p>&copy; 2026 Nandini Kalal. All Rights Reserved.</p>
+            </div>
+            <div class="footer-center">
+                <div class="footer-social-icons">
+                    <a href="https://www.linkedin.com/in/nandini-kalal-66369b35b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://www.instagram.com/_kalal_nandini_/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="footer-right">
+                <p>Designing Spaces, Crafting Experiences. Handcrafted with Precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <!-- Background animations -->
+    <script src="three-bg.js"></script>
+    <!-- Main interactive logic -->
+    <script src="script.js?v=22"></script>
+
+    <!-- Custom Cursor -->
+    <div id="custom-cursor-dot"></div>
+    <div id="custom-cursor-ring"></div>
+</body>
+</html>

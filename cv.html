@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nandini Kalal - Architecture Student CV</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600;700&family=Caveat:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CV CSS -->
+    <link rel="stylesheet" href="cv.css">
+    <style>
+        /* Editing toolbar - hidden when printing */
+        .edit-toolbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(135deg, #2A2522, #4A443F);
+            color: white;
+            padding: 12px 24px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            z-index: 9999;
+            font-family: 'Jost', sans-serif;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .edit-toolbar .toolbar-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .edit-toolbar .toolbar-left i {
+            color: #B0987F;
+            font-size: 1.2rem;
+        }
+        .edit-toolbar .toolbar-left span {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .edit-toolbar .toolbar-hint {
+            font-size: 0.8rem;
+            opacity: 0.6;
+            font-style: italic;
+        }
+        .edit-toolbar button {
+            background: #B0987F;
+            color: white;
+            border: none;
+            padding: 10px 24px;
+            border-radius: 6px;
+            font-family: 'Jost', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            letter-spacing: 1px;
+            transition: all 0.2s;
+        }
+        .edit-toolbar button:hover {
+            background: #9B8872;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(176, 152, 127, 0.4);
+        }
+        
+        /* Editable highlight */
+        [contenteditable="true"] {
+            outline: none;
+            transition: background-color 0.2s;
+            border-radius: 2px;
+        }
+        [contenteditable="true"]:hover {
+            background-color: rgba(176, 152, 127, 0.15);
+        }
+        [contenteditable="true"]:focus {
+            background-color: rgba(176, 152, 127, 0.25);
+            box-shadow: 0 0 0 2px rgba(176, 152, 127, 0.4);
+        }
+
+        /* Push CV down so toolbar doesn't cover it */
+        body {
+            padding-top: 70px !important;
+        }
+        
+        @media print {
+            .edit-toolbar { display: none !important; }
+            body { padding-top: 0 !important; }
+            [contenteditable="true"] {
+                background-color: transparent !important;
+                box-shadow: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- EDITING TOOLBAR -->
+    <div class="edit-toolbar">
+        <div class="toolbar-left">
+            <i class="fa-solid fa-pen-to-square"></i>
+            <span>EDIT MODE</span>
+            <span class="toolbar-hint">— Click on any text to edit it directly</span>
+        </div>
+        <button onclick="window.print()"><i class="fa-solid fa-file-pdf"></i>&nbsp; Save as PDF</button>
+    </div>
+
+    <div class="cv-page">
+        <!-- TOP DECORATIONS -->
+        <div class="logo-block top-right">
+            <div class="logo-dots">
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+                <span></span><span></span><span></span><span></span>
+            </div>
+            <div class="logo-letters">N<br>K</div>
+        </div>
+
+        <!-- LEFT COLUMN -->
+        <div class="sidebar">
+            <img src="assets/images/strengths-sketch.jpg" class="deco-sketch top-left" alt="Architectural Sketch">
+            
+            <!-- CONTACT -->
+            <div class="sidebar-section">
+                <h2>CONTACT</h2>
+                <ul class="contact-list">
+                    <li><i class="fa-solid fa-phone"></i> <span contenteditable="true">+91 77424 93394</span></li>
+                    <li><i class="fa-solid fa-envelope"></i> <span contenteditable="true">nandinikalal13@gmail.com</span></li>
+                    <li><i class="fa-solid fa-location-dot"></i> <span contenteditable="true">Ansal Sushant City, Bhakrasni, Jodhpur, Rajasthan</span></li>
+                    <li><i class="fa-solid fa-globe"></i> <span contenteditable="true">behance.net/nandinikalal</span></li>
+                    <li><i class="fa-brands fa-linkedin-in"></i> <span contenteditable="true">linkedin.com/in/nandinikalal13</span></li>
+                </ul>
+            </div>
+
+
+            <!-- SKILLS -->
+            <div class="sidebar-section">
+                <h2>SKILLS</h2>
+                <div class="skills-dots-list">
+                    <div class="skill-dot-item">
+                        <span contenteditable="true">Presentation Skills</span>
+                        <div class="dots"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle" style="color:var(--text-light)"></i></div>
+                    </div>
+                    <div class="skill-dot-item">
+                        <span contenteditable="true">Collaboration & Teamwork</span>
+                        <div class="dots"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle" style="color:var(--text-light)"></i></div>
+                    </div>
+                    <div class="skill-dot-item">
+                        <span contenteditable="true">Adaptability</span>
+                        <div class="dots"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle" style="color:var(--text-light)"></i></div>
+                    </div>
+                    <div class="skill-dot-item">
+                        <span contenteditable="true">Research & Analytical Thinking</span>
+                        <div class="dots"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle" style="color:var(--text-light)"></i></div>
+                    </div>
+                    <div class="skill-dot-item">
+                        <span contenteditable="true">Client Communication</span>
+                        <div class="dots"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle" style="color:var(--text-light)"></i></div>
+                    </div>
+                    <div class="skill-dot-item">
+                        <span contenteditable="true">Observation & Site Analysis</span>
+                        <div class="dots"><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle" style="color:var(--text-light)"></i></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LANGUAGES -->
+            <div class="sidebar-section">
+                <h2>LANGUAGES</h2>
+                <ul class="bullet-list">
+                    <li contenteditable="true">English</li>
+                    <li contenteditable="true">Hindi</li>
+                    <li contenteditable="true">Marwari</li>
+                </ul>
+            </div>
+
+            <div class="blob-shape"></div>
+        </div>
+
+        <!-- RIGHT COLUMN -->
+        <div class="main-content">
+            <!-- HEADER -->
+            <div class="header">
+                <h1 class="name" contenteditable="true">NANDINI<br><span class="name-light">KALAL</span></h1>
+                <h3 class="title" contenteditable="true">ARCHITECTURE STUDENT</h3>
+                <p class="quote" contenteditable="true">"Designing spaces that inspire, comfort and connect people."</p>
+                <p class="about-text header-about" contenteditable="true">
+                    Final-year B.Arch student with a strong passion for designing meaningful, human-centric spaces. I aim to balance tradition with modernity while creating sustainable and functional solutions. Curious, detail-oriented and always eager to learn, I strive to grow through every experience and contribute creatively in a collaborative environment.
+                </p>
+            </div>
+
+            <!-- EDUCATION -->
+            <div class="main-section">
+                <div class="section-title">
+                    <div class="icon-circle"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h2>EDUCATION</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date" contenteditable="true">2021 – 2026</div>
+                        <div class="timeline-content">
+                            <h4 contenteditable="true">Bachelor of Architecture</h4>
+                            <p contenteditable="true">MBM University, Jodhpur</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date" contenteditable="true">2021</div>
+                        <div class="timeline-content">
+                            <h4 contenteditable="true">Senior Secondary (12th)</h4>
+                            <p contenteditable="true">R.K. Public Sr. Sec. School, Jodhpur</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date" contenteditable="true">2019</div>
+                        <div class="timeline-content">
+                            <h4 contenteditable="true">Secondary (10th)</h4>
+                            <p contenteditable="true">R.K. Public Sr. Sec. School, Jodhpur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EXPERIENCE -->
+            <div class="main-section">
+                <div class="section-title">
+                    <div class="icon-circle"><i class="fa-solid fa-briefcase"></i></div>
+                    <h2>EXPERIENCE</h2>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content full-width">
+                            <div class="exp-header">
+                                <h4 contenteditable="true">AYA DESIGN STUDIO, JODHPUR</h4>
+                                <span class="exp-date" contenteditable="true">Jul 2023 – Mar 2024</span>
+                            </div>
+                            <p class="role-italic" contenteditable="true">Architectural Intern</p>
+                            <ul class="bullet-list-small">
+                                <li contenteditable="true">Involved in architectural planning, working drawings and 3D modelling.</li>
+                                <li contenteditable="true">Prepared presentations, stakeholder drawings and material boards.</li>
+                                <li contenteditable="true">Conducted site visits and documentation.</li>
+                                <li contenteditable="true">Gained hands-on experience in residential and commercial projects.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content full-width">
+                            <div class="exp-header">
+                                <h4 contenteditable="true">SQUELETTE DESIGN, AHMEDABAD</h4>
+                                <span class="exp-date" contenteditable="true">Jul 2025 – Dec 2025</span>
+                            </div>
+                            <p class="role-italic" contenteditable="true">Architectural Intern</p>
+                            <ul class="bullet-list-small">
+                                <li contenteditable="true">Working on live projects including residential and interior design.</li>
+                                <li contenteditable="true">Concept development, planning and detailed drawings.</li>
+                                <li contenteditable="true">3D visualization and mood board presentations.</li>
+                                <li contenteditable="true">Coordinating with team for project deliverables and documentation.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BOTTOM GRID (3 Columns) -->
+            <div class="bottom-grid">
+                <!-- SOFTWARE SKILLS -->
+                <div class="grid-column">
+                    <div class="section-title">
+                        <div class="icon-circle"><i class="fa-solid fa-desktop"></i></div>
+                        <h2>SOFTWARE SKILLS</h2>
+                    </div>
+                    <div class="software-bars">
+                        <div class="bar-item"><span contenteditable="true">AutoCAD</span><div class="bar-track"><div class="bar-fill" style="width: 90%;"></div></div></div>
+                        <div class="bar-item"><span contenteditable="true">SketchUp</span><div class="bar-track"><div class="bar-fill" style="width: 85%;"></div></div></div>
+                        <div class="bar-item"><span contenteditable="true">Enscape</span><div class="bar-track"><div class="bar-fill" style="width: 80%;"></div></div></div>
+                        <div class="bar-item"><span contenteditable="true">V-Ray</span><div class="bar-track"><div class="bar-fill" style="width: 75%;"></div></div></div>
+                        <div class="bar-item"><span contenteditable="true">D5 Render</span><div class="bar-track"><div class="bar-fill" style="width: 75%;"></div></div></div>
+                        <div class="bar-item"><span contenteditable="true">Photoshop</span><div class="bar-track"><div class="bar-fill" style="width: 80%;"></div></div></div>
+                        <div class="bar-item"><span contenteditable="true">Canva</span><div class="bar-track"><div class="bar-fill" style="width: 85%;"></div></div></div>
+                        <div class="bar-item"><span contenteditable="true">MS Office</span><div class="bar-track"><div class="bar-fill" style="width: 80%;"></div></div></div>
+                    </div>
+                </div>
+
+                <!-- ACHIEVEMENTS -->
+                <div class="grid-column">
+                    <div class="section-title">
+                        <div class="icon-circle"><i class="fa-solid fa-trophy"></i></div>
+                        <h2>ACHIEVEMENTS</h2>
+                    </div>
+                    <div class="achievements-list">
+                        <div class="achievement-item">
+                            <h4 contenteditable="true">NASA &ndash; 65th ANDC Trophy</h4>
+                            <p contenteditable="true">Participant<br>2022 &ndash; 2023</p>
+                        </div>
+                        <div class="achievement-item">
+                            <h4 contenteditable="true">Participated in KEP Event<br>at IIA Jodhpur</h4>
+                            <p contenteditable="true">2023, 2024, 2025</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- INTERESTS & QR -->
+                <div class="grid-column">
+                    <div class="section-title">
+                        <div class="icon-circle"><i class="fa-solid fa-camera"></i></div>
+                        <h2>INTERESTS</h2>
+                    </div>
+                    <ul class="interest-list">
+                        <li contenteditable="true"><i class="fa-solid fa-camera"></i> Photography</li>
+                        <li contenteditable="true"><i class="fa-solid fa-book-open"></i> Research</li>
+                        <li contenteditable="true"><i class="fa-solid fa-cube"></i> Model Making</li>
+                        <li contenteditable="true"><i class="fa-solid fa-plane"></i> Travel</li>
+                        <li contenteditable="true"><i class="fa-solid fa-microchip"></i> AI & Design Exploration</li>
+                    </ul>
+
+                    <div class="qr-container">
+                        <div class="qr-text">Scan to view<br>my portfolio</div>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://behance.net/nandinikalal" alt="QR Code">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>
