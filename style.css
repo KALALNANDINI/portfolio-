@@ -3250,10 +3250,10 @@ footer {
     }
     .node-content {
         position: relative;
-        top: auto;
-        left: auto;
-        right: auto;
-        transform: none;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        transform: none !important;
         width: 100%;
         margin: 1rem 0 0 0 !important;
         text-align: center !important;
