@@ -3549,3 +3549,20 @@ body.is-locked {
 html {
     background-color: var(--bg-primary);
 }
+@media (max-width: 768px) {
+    .portfolio-filters {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        gap: 1.5rem;
+        justify-content: flex-start;
+        padding-bottom: 1rem;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .portfolio-filters::-webkit-scrollbar {
+        display: none;
+    }
+    .filter-btn {
+        white-space: nowrap;
+    }
+}
