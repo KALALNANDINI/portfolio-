@@ -542,14 +542,7 @@ const initPortfolio = () => {
         });
     }
 
-    // Handle resume download click warning
-    const downloadResumeBtn = document.getElementById('download-resume-btn');
-    if (downloadResumeBtn) {
-        downloadResumeBtn.addEventListener('click', (e) => {
-            e.preventDefault();
-            alert("Portfolio Resume Download: You can replace this link with your actual PDF resume file path (e.g. assets/nandini_kalal_resume.pdf) once you place it in the assets folder!");
-        });
-    }
+
 
     // ==========================================
     // 8. Back to Top Button
