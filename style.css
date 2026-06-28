@@ -2670,10 +2670,15 @@ footer {
         text-align: center;
     }
     .hero-text {
-        order: 1;
+        order: 0;
     }
     .hero-visual {
-        order: 0;
+        order: 1;
+    }
+    .profile-image-container {
+        width: 260px;
+        height: 260px;
+        margin: 0 auto;
     }
     .hero-quote {
         padding-left: 0;
