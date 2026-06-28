@@ -685,7 +685,7 @@ a {
 .profile-details-list li {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     border-bottom: 1px dashed var(--border-color);
     padding-bottom: 0.75rem;
 }
@@ -712,6 +712,8 @@ a {
 .profile-details-list .label-val {
     font-weight: 500;
     font-size: 0.95rem;
+    text-align: right;
+    max-width: 60%;
 }
 
 .interests-tags {
